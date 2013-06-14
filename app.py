@@ -30,13 +30,18 @@ def verify_pin():
 		response.addSpeak("Such a conference does not exist, please try again with a valid conference pin")
 		response.addHangup()
 	else:
-		response.addConference(body='plivo')
+		response.addConference(body='plivo',
+				       action= BASE_URL+url_for('submit_recording'),
+				       record=True)
 	xml_response=make_response(response.to_xml())
 	xml_response.headers["Content-type"]="text/xml"
 	return xml_response 
+@app.route('/submit/record')
 
-
-
+def submit_recording():
+	record_url=request.args.get('RecordUrl','')
+	print record_url
+	return record_url
 
 
 
