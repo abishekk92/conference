@@ -50,4 +50,5 @@ Note:
 
 __Workflow__ : 
    The apps allows one to create conference on a subject and invite people to the conference by adding their mobile numbers.
-!["Create Conference"](https://github.com/abishekk92/conference/blob/master/screenshots/Screenshot%20from%202013-06-15%2023:12:23.png)
+
+   !["Create Conference"](https://raw.github.com/abishekk92/conference/master/screenshots/Screenshot%20from%202013-06-15%2023:12:23.png)
