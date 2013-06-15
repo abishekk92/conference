@@ -47,3 +47,7 @@ Note:
         foreman start
     ```
   - Please follow the instructions here to [deploy on heroku]( https://devcenter.heroku.com/articles/python)
+
+__Workflow__ : 
+   The apps allows one to create conference on a subject and invite people to the conference by adding their mobile numbers.
+!["Create Conference"](https://github.com/abishekk92/conference/blob/master/screenshots/Screenshot%20from%202013-06-15%2023:12:23.png)
