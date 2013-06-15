@@ -59,4 +59,34 @@ __Workflow__ :
    !["Join a Conference"](https://raw.github.com/abishekk92/conference/master/screenshots/Screenshot%20from%202013-06-15%2023:15:13.png)
    
 
-   
+   - Once the conference is created, the members are notified with the conference number and pin. The number is provisioned on the fly using Plivo's rent number endpoint. The code would look like
+     
+    ```python
+            def rent_number(plivo_api,app_name="Conference Call"):
+                app_id=get_appid(plivo_api,app_name)
+	            response=plivo_api.get_number_group({"country_iso":"US","region":"california"})
+	            group_id=response[1]["objects"][0]["group_id"]
+	            response=plivo_api.rent_from_number_group({"group_id":group_id,"app_id":app_id})
+	            number=response[1]["numbers"][0]["number"]
+	            return number
+     ```
+
+   - Once the conference is over and if the moderator has opted in for the conference to be recorded, A message containing the record url is messaged
+      
+      ```python
+                response.addConference(body='plivo',
+    			       action= BASE_URL+url_for('submit_recording'),
+				       method='GET',
+				       record=record_value)
+      ```
+      The message is sent out using the Plivo API as follows
+
+     ```python 
+                def notify(message,mobile):
+                    response=plivo_api.send_message({'src':CALLER_ID,
+				                                    'dst':mobile,
+				                                    'text':message,
+				                                    'type':'sms'
+			    	                                })
+	                return response
+     ```
