@@ -93,6 +93,7 @@ def verify_pin():
 			record_value=True
 		response.addConference(body='plivo',
 				       action= BASE_URL+url_for('submit_recording'),
+				       method='GET',
 				       record=record_value)
 	xml_response=make_response(response.to_xml())
 	xml_response.headers["Content-type"]="text/xml"
