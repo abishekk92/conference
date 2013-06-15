@@ -1,0 +1,30 @@
+<html>
+	<title>Call Forward</title>
+	<head>
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		<link href="static/main.css" rel="stylesheet">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		{% if conferences %}
+		<h1> You can join one of the following conferences </h1>
+		{%for conference in conferences%}
+		<li>
+		<p> {{conference.subject}} - &nbsp;Number:{{conference.conference_number}},PIN:{{conference.conference_pin}} </p>
+		</li>
+		{% endfor %}
+		{% include 'modal_form.html' %}
+		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#form_modal"> Create a new conference </button>
+		{% else %}
+		{% include 'form.html' %}
+		{% endif %}
+				
+</div>
+	<script>
+		/*$('button').click(function(){
+			$('#form_modal').modal('toggle');
+		});*/
+	</script>
+</body>
+</html>
