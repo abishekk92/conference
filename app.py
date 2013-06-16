@@ -49,7 +49,7 @@ def create():
 		members.append(int(request.args.get('member0','')))
 		members.append(int(request.args.get('member1','')))
 	except:
-		members.pop()
+		pass
 	if record_value=="on":
 		record=True
 	print members
