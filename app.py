@@ -46,10 +46,10 @@ def create():
 	record=False
 	members=[]
 	try:
-		members.append(request.args.get('member0',''))
-		members.append(request.args.get('member1',''))
+		members.append(int(request.args.get('member0','')))
+		members.append(int(request.args.get('member1','')))
 	except:
-		pass
+		members.pop()
 	if record_value=="on":
 		record=True
 	print members
