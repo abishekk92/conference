@@ -44,9 +44,15 @@ def create():
 	phone=request.args.get('phone','')
 	record_value=request.args.get('record','')
 	record=False
-	members=[request.args.get('member0',''),request.args.get('member1','0')]
+	members=[]
+	try:
+		members.append(request.args.get('member0',''))
+		members.append(request.args.get('member1',''))
+	except:
+		pass
 	if record_value=="on":
 		record=True
+	print members
 	conference_number=rent_number(plivo_api)
 	conference_pin=generate_pin(conference_number)
 	create_conference(subject,phone,members,record,conference_number,conference_pin)
