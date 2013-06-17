@@ -97,6 +97,7 @@ def verify_pin():
 	else:
 		if get_record(conference_number):
 			record_value=True
+		response.addSpeak("Please wait, while we are connecting your call")
 		response.addConference(body='plivo',
 				       action= BASE_URL+url_for('submit_recording'),
 				       method='GET',
