@@ -1,6 +1,6 @@
 from mongoengine import *
 
-connect('conference',host="mongodb://conference:conference@dharma.mongohq.com:10000/conference")
+connect('conference',host="MONGODB-URL")
 
 class Conference(Document):
 	subject=StringField()
