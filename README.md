@@ -60,12 +60,12 @@ Or you can simply do the following
     ```bash
 	$ heroku login
 	Enter your Heroku credentials.
-	Email: kenneth@example.com
+	Email: foobar@example.com
 	Password:
 	Could not find an existing public key.
 	Would you like to generate one? [Yn]
 	Generating new SSH public key.
-	Uploading ssh public key /Users/kenneth/.ssh/id_rsa.pub
+	Uploading ssh public key /Users/foobar/.ssh/id_rsa.pub
     ```
   - We need to create an app on Heroku, so that we can deploy
    
