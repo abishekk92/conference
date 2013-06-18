@@ -5,7 +5,7 @@ A simple conference app showing off Plivo's capability. Provisions a number and 
 
 This application shows off Plivo's ability as a platfporm.
 
-__Installation___
+__Installation__
 
 
 Clone the repo:
