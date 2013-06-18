@@ -48,6 +48,39 @@ Note:
     ```
   - Please follow the instructions here to [deploy on heroku]( https://devcenter.heroku.com/articles/python)
 
+Or you can simply do the following
+
+  - Get a [Heroku account](https://id.heroku.com/signup). It's free!
+  
+    ```bash
+       cd conference
+    ```
+  - Log into Heroku and upload your public key(assuming it's the first time, you're using Heroku)
+    
+    ```bash
+	heroku login
+	Enter your Heroku credentials.
+	Email: kenneth@example.com
+	Password:
+	Could not find an existing public key.
+	Would you like to generate one? [Yn]
+	Generating new SSH public key.
+	Uploading ssh public key /Users/kenneth/.ssh/id_rsa.pub
+    ```
+  - We need to create an app on Heroku, so that we can deploy
+   
+    ```bash
+	heroku create
+	Creating stark-window-524... done, stack is cedar
+	http://stark-window-524.herokuapp.com/ | git@heroku.com:stark-window-524.git
+	Git remote heroku added
+    ```
+   - Finally to deploy 
+     
+     ```bash
+	  git push heroku master
+     ```
+
 __Workflow__ : 
    
    - The apps allows one to create conference on a subject and invite people to the conference by adding their mobile numbers.
