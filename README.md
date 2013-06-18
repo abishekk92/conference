@@ -11,13 +11,13 @@ __Installation___
 Clone the repo:
 
 ```bash
-    git clone git@github.com:abishekk92/conference.git
+    $ git clone git@github.com:abishekk92/conference.git
 ```
 
 Install the Python dependencies:
 
 ```bash
-    pip install -r requirements.txt
+    $ pip install -r requirements.txt
 ```
 Note: 
 
@@ -44,7 +44,7 @@ Note:
   - To run the app
     
     ```bash
-        foreman start
+        $ foreman start
     ```
   - Please follow the instructions here to [deploy on heroku]( https://devcenter.heroku.com/articles/python)
 
@@ -53,12 +53,12 @@ Or you can simply do the following
   - Get a [Heroku account](https://id.heroku.com/signup). It's free!
   
     ```bash
-       cd conference
+       $ cd conference
     ```
   - Log into Heroku and upload your public key(assuming it's the first time, you're using Heroku)
     
     ```bash
-	heroku login
+	$ heroku login
 	Enter your Heroku credentials.
 	Email: kenneth@example.com
 	Password:
@@ -70,16 +70,16 @@ Or you can simply do the following
   - We need to create an app on Heroku, so that we can deploy
    
     ```bash
-	heroku create
+	$ heroku create
 	Creating stark-window-524... done, stack is cedar
 	http://stark-window-524.herokuapp.com/ | git@heroku.com:stark-window-524.git
 	Git remote heroku added
     ```
-   - Finally to deploy 
+  - Finally to deploy 
      
-     ```bash
-	  git push heroku master
-     ```
+    ```bash
+	  $ git push heroku master
+    ```
 
 __Workflow__ : 
    
